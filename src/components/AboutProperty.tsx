@@ -1,20 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Shield, Star, Waves } from 'lucide-react';
+import { MapPin, Shield, Utensils, Trophy, Sun, Wind } from 'lucide-react';
 import './AboutProperty.css';
 import resortImage from '../assets/images/montaresa_resort.png';
 
 export const AboutProperty: React.FC = () => {
   const features = [
     {
-      icon: <Waves className="feature-icon" />,
-      title: "Lazer Club Resort",
-      desc: "Piscinas de borda infinita, lago ornamental, mini golf e quadras de beach tennis."
+      icon: <Wind className="feature-icon" />,
+      title: "Golf & Natureza",
+      desc: "Campo de golfe exclusivo e integração total com a paisagem de Atibaia."
     },
     {
-      icon: <Star className="feature-icon" />,
-      title: "Arquitetura Exclusiva",
-      desc: "Lotes de 360m² a 1.200m² com total liberdade para projetos neoclássicos de alto padrão."
+      icon: <Sun className="feature-icon" />,
+      title: "Lazer de Resort",
+      desc: "Prainha artificial, piscinas de borda infinita e lago ornamental."
+    },
+    {
+      icon: <Utensils className="feature-icon" />,
+      title: "Alta Gastronomia",
+      desc: "Dois restaurantes exclusivos com cardápios assinados por chefs renomados."
+    },
+    {
+      icon: <Trophy className="feature-icon" />,
+      title: "Resort Esportivo",
+      desc: "Quadras de beach tênis, tênis (saibro) e academia com vista panorâmica."
     },
     {
       icon: <Shield className="feature-icon" />,
