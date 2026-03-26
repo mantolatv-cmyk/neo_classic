@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import './Hero.css';
-import heroImage from '../assets/images/hero_facade_neoclassic.png';
+import heroImage from '../assets/images/hero_polished.png';
 
 export const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
