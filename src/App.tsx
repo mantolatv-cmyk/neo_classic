@@ -2,6 +2,7 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Hotspots } from './components/Hotspots';
 import { AboutProperty } from './components/AboutProperty';
+import { Gallery } from './components/Gallery';
 import { FloorPlan } from './components/FloorPlan';
 import './App.css';
 
@@ -33,6 +34,7 @@ function App() {
       <main>
         <Hero />
         <AboutProperty />
+        <Gallery />
         <Hotspots />
         <FloorPlan />
       </main>
