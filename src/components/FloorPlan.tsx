@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './FloorPlan.css';
 import floorPlanImage from '../assets/images/realistic_floorplan.png';
+import floorPlanTopView from '../assets/images/floorplan_topview.png';
 
 export const FloorPlan: React.FC = () => {
   return (
@@ -12,25 +13,40 @@ export const FloorPlan: React.FC = () => {
         <p className="section-subtitle">A realistic view of the 200m² L-shaped layout.</p>
       </div>
 
-      <div className="floorplan-image-container">
-        <img 
-          src={floorPlanImage} 
-          alt="Realistic 3 Suite L-Shape Floor Plan" 
-          loading="lazy"
-          className="floorplan-image"
-        />
-
+      <div className="floorplan-grid">
         <motion.div 
-          className="glass-panel-dark overlay-card"
-          initial={{ opacity: 0, y: 50 }}
+          className="floorplan-card"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
-          <h3>Spatial Flow</h3>
-          <p>This 200m² single-story design features a perfect "L" shape with 3 master suites, seamlessly wrapping around an elegant outdoor patio and pool area.</p>
+          <img src={floorPlanImage} alt="Floor Plan Angle View" loading="lazy" />
+          <p className="caption">Perspectiva Isométrica</p>
+        </motion.div>
+
+        <motion.div 
+          className="floorplan-card"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          <img src={floorPlanTopView} alt="Floor Plan Top View" loading="lazy" />
+          <p className="caption">Planta Técnica Superior</p>
         </motion.div>
       </div>
+
+      <motion.div 
+        className="glass-panel-dark floorplan-info"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4 }}
+      >
+        <h3 className="text-gradient-gold">Spatial Flow</h3>
+        <p>This 200m² single-story design features a perfect "L" shape with 3 master suites, seamlessly wrapping around an elegant outdoor patio and pool area. Every room connects to the central courtyard for maximum natural light.</p>
+      </motion.div>
     </section>
   );
 };

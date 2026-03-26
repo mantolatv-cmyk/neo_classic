@@ -7,58 +7,73 @@
   align-items: center;
 }
 
-.floorplan-image-container {
+.floorplan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   width: 100%;
-  max-width: 1200px;
-  position: relative;
+  max-width: 1100px;
   margin-top: var(--space-lg);
+}
+
+.floorplan-card {
+  background: white;
+  padding: 1.5rem;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  transition: box-shadow var(--transition-slow);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.6s var(--ease-smooth);
 }
 
-.floorplan-image-container:hover {
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+.floorplan-card:hover {
+  transform: translateY(-10px);
 }
 
-.floorplan-image {
+.floorplan-card img {
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.overlay-card {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 350px;
-  padding: 2rem;
-  margin: 2rem;
-  border-radius: 8px;
-}
-
-.overlay-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
+  border-radius: 4px;
   margin-bottom: 1rem;
-  color: var(--color-gold);
 }
 
-.overlay-card p {
+.caption {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-light);
+  font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .overlay-card {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    margin: 1rem 0 0 0;
-    max-width: 100%;
+.floorplan-info {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 3rem;
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.floorplan-info h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.floorplan-info p {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 968px) {
+  .floorplan-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
