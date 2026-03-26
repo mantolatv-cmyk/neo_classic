@@ -1,0 +1,64 @@
+.floorplan-section {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floorplan-image-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin-top: var(--space-lg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: box-shadow var(--transition-slow);
+}
+
+.floorplan-image-container:hover {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+
+.floorplan-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.overlay-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 350px;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 8px;
+}
+
+.overlay-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-gold);
+}
+
+.overlay-card p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .overlay-card {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin: 1rem 0 0 0;
+    max-width: 100%;
+  }
+}
