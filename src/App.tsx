@@ -1,6 +1,7 @@
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Hotspots } from './components/Hotspots';
+import { AboutProperty } from './components/AboutProperty';
 import { FloorPlan } from './components/FloorPlan';
 import './App.css';
 
@@ -31,6 +32,7 @@ function App() {
       <Navigation />
       <main>
         <Hero />
+        <AboutProperty />
         <Hotspots />
         <FloorPlan />
       </main>
